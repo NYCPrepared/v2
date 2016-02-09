@@ -36,7 +36,7 @@
             <select class="chosen-select" multiple>
                 <option value=""></option>
                 {% for language in languages %}
-                <option value="{{language.name}}" {{language.status}}>{{language.nativeName}}</option>
+                <option value="{{language.name}}" {{language.status}}>{{language.name}}</option>
                 {% endfor %}
             </select>
         </div>
@@ -48,8 +48,8 @@
         </div>
         <div class="col-md-8">
 
-         <h3>Weekdays</h3>
-         <div class="choices has-3">
+           <h3>Weekdays</h3>
+           <div class="choices has-3">
             {% for weekday in weekdays %}
             <label class="toggle">
                 <div>
@@ -77,18 +77,18 @@
         <select class="chosen-select" multiple>
             <option></option>
             <optgroup label="Manhattan">
-             {% for manhattan in manhattan %}
-             <option value="{{manhattan.name}}">{{manhattan.name}}</option>
-             {% endfor %}
-         </optgroup>
-         <optgroup label="Brooklyn">
-             {% for brooklyn in brooklyn %}
-             <option value="{{brooklyn.name}}">{{brooklyn.name}}</option>
-             {% endfor %}
-         </optgroup>
-     </select>
+               {% for manhattan in manhattan %}
+               <option value="{{manhattan.name}}">{{manhattan.name}}</option>
+               {% endfor %}
+           </optgroup>
+           <optgroup label="Brooklyn">
+               {% for brooklyn in brooklyn %}
+               <option value="{{brooklyn.name}}">{{brooklyn.name}}</option>
+               {% endfor %}
+           </optgroup>
+       </select>
 
- </div>
+   </div>
 
 </fieldset>
 
@@ -128,31 +128,31 @@
                 <i class="fa fa-info-circle"></i>
             </a>
             <div id="one" class="collapse">
-               <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aspernatur, nisi eligendi consectetur rem aliquid ex culpa sint dolor, ea enim officiis animi, hic voluptatem nihil at in, accusantium veritatis?</p>
-               </div>
-            </div>
-        </div>
-
-        <label class="toggle">
-            <div>
-                <input type="checkbox">
-                <label></label>
-            </div>
-            <span>I can act as a collection space for donations.</span>
-        </label>
-
-<div class="info">
-            <a data-toggle="collapse" data-parent="#collapse" href="#two" class="collapse-trigger">
-                <i class="fa fa-info-circle"></i>
-            </a>
-            <div id="two" class="collapse">
-               <div class="content">
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deleniti possimus dolore vitae ipsa esse itaque, eum suscipit enim. Autem quam a, laborum quasi veniam eum blanditiis omnis hic exercitationem!</p>
-               </div>
+             <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aspernatur, nisi eligendi consectetur rem aliquid ex culpa sint dolor, ea enim officiis animi, hic voluptatem nihil at in, accusantium veritatis?</p>
             </div>
         </div>
     </div>
+
+    <label class="toggle">
+        <div>
+            <input type="checkbox">
+            <label></label>
+        </div>
+        <span>I can act as a collection space for donations.</span>
+    </label>
+
+    <div class="info">
+        <a data-toggle="collapse" data-parent="#collapse" href="#two" class="collapse-trigger">
+            <i class="fa fa-info-circle"></i>
+        </a>
+        <div id="two" class="collapse">
+         <div class="content">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deleniti possimus dolore vitae ipsa esse itaque, eum suscipit enim. Autem quam a, laborum quasi veniam eum blanditiis omnis hic exercitationem!</p>
+         </div>
+     </div>
+ </div>
+</div>
 </fieldset>
 <fieldset class="action">
     <a href="#" class="btn btn-default">

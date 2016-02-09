@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "false";
+    src: url("ChasingEmbers.eot");
+    src: url("ChasingEmbers.eot?#iefix") format("embedded-opentype"),
+         url("ChasingEmbers.woff") format("woff"),
+         url("ChasingEmbers.ttf") format("truetype"),
+         url("ChasingEmbers.svg#false") format("svg");
+    font-weight: false;
+    font-style: false;
+}

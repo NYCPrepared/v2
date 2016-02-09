@@ -2,33 +2,87 @@
 {% block active %}volunteer{% endblock %}
 {% block content %}
 <form>
-    <h1>Volunteer Form</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores voluptatem animi dolore fugiat doloribus facilis nam tempore soluta ipsam?</p>
+    <div class="title">
+            <h1>Volunteer Form</h1>
+            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores voluptatem animi dolore fugiat doloribus facilis nam tempore soluta ipsam?</p>
+    </div>
     <fieldset>
-        <h2>Personal Info</h2>
+        <div class="title">
+            <h2>Personal Info</h2>
+            <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
+    </div>
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
         <input type="email" placeholder="Email">
         <input type="text" placeholder="Phone">
     </fieldset>
     <fieldset>
-        <h2>Skills</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quisquam vero voluptatum aperiam necessitatibus laborum similique, ad libero illum mollitia?</p>
-        <div class="select">
-            <select class="chosen-select" multiple>
+        <div class="title">
+            <h2>Knowledge</h2>
+            <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
+    </div>
+      <div class="row">
+          <div class="col-md-6">
+                <h3>Skills</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae possimus animi quasi? Ratione consequatur temporibus, a quaerat sunt ex soluta!</p>
+        <select class="chosen-select" multiple>
                 <option>skill</option>
                 {% for skill in skills %}
                 <option value="{{skill.name}}">{{skill.name}}</option>
                 {% endfor %}
             </select>
-        </div>
+          </div>
+          <div class="col-md-6">
+              <h3>Languages</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dolor, provident autem natus iste debitis officia, pariatur ad ducimus voluptatibus!</p>
+              <select class="chosen-select" multiple>
+        <option value=""></option>
+        {% for language in languages %}
+        <option value="{{language.name}}" {{language.status}}>{{language.name}}</option>
+        {% endfor %}
+    </select>
+          </div>
+      </div>
     </fieldset>
     <fieldset>
+        <div class="title">
         <h2>Availability</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eveniet.</p>
-        <div class="filter">
+        <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium perspiciatis nemo omnis voluptates culpa voluptatibus itaque ipsam repellat deleniti labore!.</p>
+       </div>
+       <div class="row">
+
+            <div class="col-md-6">
+
+       <h3>Weekdays</h3>
+       <div class="choices has-2">
+            {% for weekday in weekdays %}
+            <label class="toggle">
+                <div>
+                    <input type="checkbox"value="{{weekday.name}}">
+                    <label></label>
+                </div>
+                <span>{{weekday.name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+    <h3>Times</h3>
+    <div class="choices has-2">
+            {% for time in times %}
+            <label class="toggle">
+                <div>
+                    <input type="checkbox"value="{{time.name}}">
+                    <label></label>
+                </div>
+                <span>{{time.name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+
+            </div>
+            <div class="col-md-6">
+
             <h3>Regions</h3>
-            <div class="select">
+
               <select class="chosen-select" multiple>
                 <option></option>
                 <optgroup label="Manhattan">
@@ -42,55 +96,24 @@
                    {% endfor %}
                </optgroup>
            </select>
-       </div>
-   </div>
-   <div class="filter">
-       <h3>Days</h3>
-       <div class="choices has-2">
-            {% for weekday in weekdays %}
-            <label class="toggle">
-                <div>
-                    <input type="checkbox"value="{{weekday.name}}">
-                    <label></label>
-                </div>
-                <span>{{weekday.name}}</span>
-            </label>
-            {% endfor %}
+
+
+            </div>
         </div>
-   </div>
-<div class="filter">
-    <h3>Times</h3>
-    <div class="choices has-2">
-            {% for time in times %}
-            <label class="toggle">
-                <div>
-                    <input type="checkbox"value="{{time.name}}">
-                    <label></label>
-                </div>
-                <span>{{time.name}}</span>
-            </label>
-            {% endfor %}
-        </div>
-</div>
+
 </fieldset>
+
 <fieldset>
-    <h2>Languages</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, dolores.</p>
-    <div class="select">
-      <select class="chosen-select" multiple>
-        <option value=""></option>
-        {% for language in languages %}
-        <option value="{{language.name}}">{{language.name}}</option>
-        {% endfor %}
-    </select>
-</div>
-</fieldset>
-<fieldset>
-    <h2>Other</h2>
-    <div class="filter">
+    <div class="title">
+    <h2>Resources</h2>
+    <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minima, cupiditate vel commodi corporis a dolor ea quo magnam voluptas!</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
         <h3>Transportation</h3>
         <p>Check all that apply</p>
-        <div class="choices has-2">
+        <div class="choices has-3">
             {% for vehicle in vehicles %}
             <label class="toggle">
                 <div>
@@ -101,8 +124,12 @@
             </label>
             {% endfor %}
         </div>
-    </div>
-    <div class="filter">
+
+        </div>
+        <div class="col-md-6">
+            <h3>Administrative</h3>
+            <p>Nesciunt veniam eum libero accusantium, vitae, quasi sequi eius quo fuga omnis!</p>
+
           <label class="toggle">
                 <div>
                     <input type="checkbox">
@@ -118,6 +145,8 @@
                 <span>I can act as a collection space for donations.</span>
             </label>
 
+
+        </div>
     </div>
 </fieldset>
 <fieldset class="action">

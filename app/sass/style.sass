@@ -4,7 +4,9 @@
 
 // ('ㅅ')づ font variables
 
-$font-title: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-title: HighVoltage
+$font-main: ChasingEmbers
+$font-blurb: steelfish
 $font-text: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 $font-mono: "Courier New", Courier, monospace
 
@@ -12,12 +14,14 @@ $font-mono: "Courier New", Courier, monospace
 
 $gap: 20px
 $bp: 770px
+$radius: 5px
 
 // ('ㅅ')づ color variables
 
-$color-bg: white
-$color-text: black
-$color-title: black
+$color-bg: #f9d180
+$color-blurb: lighten(#aebcc4, 5%)
+$color-text: #44535c
+$color-title: white
 $color-link: grey
 $color-divider: grey
 $color-link-hover: lighten($color-link, 20%)
@@ -72,6 +76,25 @@ $icons_on: true
 // ('ㅅ')づ project imports
 
 @import 'layout'
+
++font-face(steelfish)
++font-face(HighVoltage)
++font-face(ChasingEmbers)
+
+.title
+    +clearfix
+    padding-bottom: $gap
+    border-bottom: solid 1px $color-bg
+    margin-bottom: $gap
+    +media($bp, min)
+        h1, h2, h3, h4
+            display: inline-block
+            width: 60%
+        p.blurb
+            float: right
+            width: 40%
+            padding-top: $gap
+
 
 
 

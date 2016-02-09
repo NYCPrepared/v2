@@ -134,10 +134,31 @@ input, textarea
     &:focus
       outline: none
 
+.chosen-container-multi
+  .chosen-choices
+    +radius(normal, 2px)
+    height: 40px
+    padding: 7px
+    li.search-field
+      input[type="text"]
+        font-family: $font-text !important
+
+a.search-choice-close
+  background: none !important
+  text-decoration: none !important
+  &:before
+    font-family: FontAwesome
+    content: $fa-var-times-circle
+    font-size: 12px
 
 .chosen-container
   +only(touch)
     @extend .select
+
+.chosen-choices
+  height: 40px
+  padding: 7px !important
+  +shadow(normal, inset none)
 
 input, textarea, .select
   margin-bottom: 10px
@@ -147,3 +168,18 @@ textarea
 
 select
   +stamp($icon: $fa-var-check, $position: right)
+
+fieldset
+  &:not(.action)
+    background-color: $color-blurb
+    +radius(normal, $radius)
+    padding: $gap
+    margin: $gapxhalf 0
+  .filter:not(:first-of-type)
+    border-top: solid 1px #ccc
+    margin-top: $gap
+    padding-top: $gap
+  &.action
+    margin-bottom: $gap
+    .btn
+      padding: 10px 20px

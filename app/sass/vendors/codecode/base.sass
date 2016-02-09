@@ -514,10 +514,35 @@ textarea
 
 // ('ㅅ')づ base rules
 
-h1, h2, h3, h4, h5, h6
+h1
+  font-family: $font-main
+  color: $color-title
+  +reset(all)
+  text-rendering: optimizeLegibility
+  font-size: 120px
+
+.blurb
+  font-family: $font-blurb
+  font-size: 20px
+
+h3, h4, h5, h6
   font-family: $font-title
+  color: $color-text
+  text-rendering: optimizeLegibility
+  text-transform: uppercase
+  margin-top: 0
+
+h1, h2
+  font-family: $font-main
   color: $color-title
   text-rendering: optimizeLegibility
+  line-height: 60%
+
+h1
+  font-size: 140px
+
+h2
+  font-size: 120px
 
 body
   background-color: $color-bg

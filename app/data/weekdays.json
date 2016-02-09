@@ -1,0 +1,11 @@
+{
+  "weekdays": [
+  {"name": "Sunday", "code": "S", "checked": ""},
+  {"name": "Monday", "code": "M", "checked": "checked"},
+  {"name": "Tuesday", "code": "T", "checked": "checked"},
+  {"name": "Wednesday", "code": "W", "checked": "checked"},
+  {"name": "Thursday", "code": "T", "checked": "checked"},
+  {"name": "Friday", "code": "F", "checked": "checked"},
+  {"name": "Saturday", "code": "S", "checked": ""}
+  ]
+}

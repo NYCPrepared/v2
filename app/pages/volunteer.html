@@ -1,0 +1,135 @@
+{% extends "form.html" %}
+{% block active %}volunteer{% endblock %}
+{% block content %}
+<form>
+    <h1>Volunteer Form</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores voluptatem animi dolore fugiat doloribus facilis nam tempore soluta ipsam?</p>
+    <fieldset>
+        <h2>Personal Info</h2>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone">
+    </fieldset>
+    <fieldset>
+        <h2>Skills</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quisquam vero voluptatum aperiam necessitatibus laborum similique, ad libero illum mollitia?</p>
+        <div class="select">
+            <select class="chosen-select" multiple>
+                <option>skill</option>
+                {% for skill in skills %}
+                <option value="{{skill.name}}">{{skill.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <h2>Availability</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eveniet.</p>
+        <div class="filter">
+            <h3>Regions</h3>
+            <div class="select">
+              <select class="chosen-select" multiple>
+                <option></option>
+                <optgroup label="Manhattan">
+                   {% for manhattan in manhattan %}
+                   <option value="{{manhattan.name}}">{{manhattan.name}}</option>
+                   {% endfor %}
+               </optgroup>
+               <optgroup label="Brooklyn">
+                   {% for brooklyn in brooklyn %}
+                   <option value="{{brooklyn.name}}">{{brooklyn.name}}</option>
+                   {% endfor %}
+               </optgroup>
+           </select>
+       </div>
+   </div>
+   <div class="filter">
+       <h3>Days</h3>
+       <div class="choices has-2">
+            {% for weekday in weekdays %}
+            <label class="toggle">
+                <div>
+                    <input type="checkbox"value="{{weekday.name}}">
+                    <label></label>
+                </div>
+                <span>{{weekday.name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+   </div>
+<div class="filter">
+    <h3>Times</h3>
+    <div class="choices has-2">
+            {% for time in times %}
+            <label class="toggle">
+                <div>
+                    <input type="checkbox"value="{{time.name}}">
+                    <label></label>
+                </div>
+                <span>{{time.name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+</div>
+</fieldset>
+<fieldset>
+    <h2>Languages</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, dolores.</p>
+    <div class="select">
+      <select class="chosen-select" multiple>
+        <option value=""></option>
+        {% for language in languages %}
+        <option value="{{language.name}}">{{language.name}}</option>
+        {% endfor %}
+    </select>
+</div>
+</fieldset>
+<fieldset>
+    <h2>Other</h2>
+    <div class="filter">
+        <h3>Transportation</h3>
+        <p>Check all that apply</p>
+        <div class="choices has-2">
+            {% for vehicle in vehicles %}
+            <label class="toggle">
+                <div>
+                    <input type="checkbox"value="{{vehicle.name}}">
+                    <label></label>
+                </div>
+                <span>{{vehicle.name}}</span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="filter">
+          <label class="toggle">
+                <div>
+                    <input type="checkbox">
+                    <label></label>
+                </div>
+                <span>I am also willing to offer housing for evacuees.</span>
+            </label>
+<label class="toggle">
+                <div>
+                    <input type="checkbox">
+                    <label></label>
+                </div>
+                <span>I can act as a collection space for donations.</span>
+            </label>
+
+    </div>
+</fieldset>
+<fieldset class="action">
+    <a href="#" class="btn btn-default">
+        <i class="fa fa-times"></i>
+        Cancel
+    </a>
+    <a href="#" class="btn btn-primary pull-right">
+        <i class="fa fa-check"></i>
+        Save
+    </a>
+</fieldset>
+
+</form>
+{% endblock %}

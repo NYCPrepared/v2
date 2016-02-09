@@ -2,54 +2,54 @@
 {% block active %}volunteer{% endblock %}
 {% block content %}
 <form>
-            <h1>Volunteer Form</h1>
+    <h1>Volunteer Form</h1>
 
     <fieldset class="row">
         <div class="col-md-4">
             <h2>About</h2>
             <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
-    </div>
-    <div class="col-md-8">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Phone">
-    </div>
+        </div>
+        <div class="col-md-8">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Phone">
+        </div>
     </fieldset>
 
     <fieldset class="row">
         <div class="col-md-4">
             <h2>Knowledge</h2>
             <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
-    </div>
-          <div class="col-md-8">
-                <h3>Skills</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae possimus animi quasi? Ratione consequatur temporibus, a quaerat sunt ex soluta!</p>
-        <select class="chosen-select" multiple>
+        </div>
+        <div class="col-md-8">
+            <h3>Skills</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae possimus animi quasi? Ratione consequatur temporibus, a quaerat sunt ex soluta!</p>
+            <select class="chosen-select" multiple>
                 <option>skill</option>
                 {% for skill in skills %}
                 <option value="{{skill.name}}">{{skill.name}}</option>
                 {% endfor %}
             </select>
-              <h3>Languages</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dolor, provident autem natus iste debitis officia, pariatur ad ducimus voluptatibus!</p>
-              <select class="chosen-select" multiple>
-        <option value=""></option>
-        {% for language in languages %}
-        <option value="{{language.name}}" {{language.status}}>{{language.nativeName}}</option>
-        {% endfor %}
-    </select>
-      </div>
+            <h3>Languages</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dolor, provident autem natus iste debitis officia, pariatur ad ducimus voluptatibus!</p>
+            <select class="chosen-select" multiple>
+                <option value=""></option>
+                {% for language in languages %}
+                <option value="{{language.name}}" {{language.status}}>{{language.nativeName}}</option>
+                {% endfor %}
+            </select>
+        </div>
     </fieldset>
     <fieldset class="row">
         <div class="col-md-4">
-        <h2>Availability</h2>
-        <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium perspiciatis nemo omnis voluptates culpa voluptatibus itaque ipsam repellat deleniti labore!.</p>
-       </div>
-            <div class="col-md-8">
+            <h2>Availability</h2>
+            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium perspiciatis nemo omnis voluptates culpa voluptatibus itaque ipsam repellat deleniti labore!.</p>
+        </div>
+        <div class="col-md-8">
 
-       <h3>Weekdays</h3>
-       <div class="choices has-3">
+         <h3>Weekdays</h3>
+         <div class="choices has-3">
             {% for weekday in weekdays %}
             <label class="toggle">
                 <div>
@@ -60,8 +60,8 @@
             </label>
             {% endfor %}
         </div>
-    <h3>Times</h3>
-    <div class="choices has-3">
+        <h3>Times</h3>
+        <div class="choices has-3">
             {% for time in times %}
             <label class="toggle">
                 <div>
@@ -72,32 +72,32 @@
             </label>
             {% endfor %}
         </div>
-            <h3>Regions</h3>
+        <h3>Regions</h3>
 
-              <select class="chosen-select" multiple>
-                <option></option>
-                <optgroup label="Manhattan">
-                   {% for manhattan in manhattan %}
-                   <option value="{{manhattan.name}}">{{manhattan.name}}</option>
-                   {% endfor %}
-               </optgroup>
-               <optgroup label="Brooklyn">
-                   {% for brooklyn in brooklyn %}
-                   <option value="{{brooklyn.name}}">{{brooklyn.name}}</option>
-                   {% endfor %}
-               </optgroup>
-           </select>
+        <select class="chosen-select" multiple>
+            <option></option>
+            <optgroup label="Manhattan">
+             {% for manhattan in manhattan %}
+             <option value="{{manhattan.name}}">{{manhattan.name}}</option>
+             {% endfor %}
+         </optgroup>
+         <optgroup label="Brooklyn">
+             {% for brooklyn in brooklyn %}
+             <option value="{{brooklyn.name}}">{{brooklyn.name}}</option>
+             {% endfor %}
+         </optgroup>
+     </select>
 
-        </div>
+ </div>
 
 </fieldset>
 
 <fieldset class="row">
     <div class="col-md-4">
-    <h2>Resources</h2>
-    <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minima, cupiditate vel commodi corporis a dolor ea quo magnam voluptas!</p>
+        <h2>Resources</h2>
+        <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minima, cupiditate vel commodi corporis a dolor ea quo magnam voluptas!</p>
     </div>
-        <div class="col-md-8">
+    <div class="col-md-8">
 
         <h3>Transportation</h3>
         <p>Check all that apply</p>
@@ -113,25 +113,45 @@
             {% endfor %}
         </div>
 
-            <h3>Administrative</h3>
-            <p>Nesciunt veniam eum libero accusantium, vitae, quasi sequi eius quo fuga omnis!</p>
+        <h3>Administrative</h3>
+        <p>Nesciunt veniam eum libero accusantium, vitae, quasi sequi eius quo fuga omnis!</p>
 
-          <label class="toggle">
-                <div>
-                    <input type="checkbox">
-                    <label></label>
-                </div>
-                <span>I am also willing to offer housing for evacuees.</span>
-            </label>
-<label class="toggle">
-                <div>
-                    <input type="checkbox">
-                    <label></label>
-                </div>
-                <span>I can act as a collection space for donations.</span>
-            </label>
+        <label class="toggle">
+            <div>
+                <input type="checkbox">
+                <label></label>
+            </div>
+            <span>I am also willing to offer housing for evacuees.</span>
+        </label>
+        <div class="info">
+            <a data-toggle="collapse" data-parent="#collapse" href="#one" class="collapse-trigger">
+                <i class="fa fa-info-circle"></i>
+            </a>
+            <div id="one" class="collapse">
+               <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aspernatur, nisi eligendi consectetur rem aliquid ex culpa sint dolor, ea enim officiis animi, hic voluptatem nihil at in, accusantium veritatis?</p>
+               </div>
+            </div>
+        </div>
 
+        <label class="toggle">
+            <div>
+                <input type="checkbox">
+                <label></label>
+            </div>
+            <span>I can act as a collection space for donations.</span>
+        </label>
 
+<div class="info">
+            <a data-toggle="collapse" data-parent="#collapse" href="#two" class="collapse-trigger">
+                <i class="fa fa-info-circle"></i>
+            </a>
+            <div id="two" class="collapse">
+               <div class="content">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deleniti possimus dolore vitae ipsa esse itaque, eum suscipit enim. Autem quam a, laborum quasi veniam eum blanditiis omnis hic exercitationem!</p>
+               </div>
+            </div>
+        </div>
     </div>
 </fieldset>
 <fieldset class="action">

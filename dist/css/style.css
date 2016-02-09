@@ -11074,3 +11074,14 @@ h1 {
 
 p.blurb {
   padding-right: 60px; }
+
+.info .collapse-trigger {
+  float: right;
+  margin-top: -35px;
+  font-size: 20px;
+  padding-left: 60px; }
+  .info .collapse-trigger:hover {
+    color: white; }
+
+.info .content {
+  padding-left: 40px; }

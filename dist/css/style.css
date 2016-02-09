@@ -9936,7 +9936,7 @@ textarea {
 .browserupgrade {
   margin: 0.2em 0;
   background: #cccccc;
-  color: #44535c;
+  color: #916f46;
   padding: 0.2em 0; }
 
 .hidden {
@@ -9981,17 +9981,17 @@ textarea {
 @media print {
   * {
     background: transparent !important;
-    color: #44535c !important;
+    color: #916f46 !important;
     box-shadow: none !important;
     text-shadow: none !important; }
     *:before {
       background: transparent !important;
-      color: #44535c !important;
+      color: #916f46 !important;
       box-shadow: none !important;
       text-shadow: none !important; }
     *:after {
       background: transparent !important;
-      color: #44535c !important;
+      color: #916f46 !important;
       box-shadow: none !important;
       text-shadow: none !important; }
   a {
@@ -10033,7 +10033,7 @@ textarea {
 
 h1 {
   font-family: ChasingEmbers;
-  color: white;
+  color: #916f46;
   margin: 0px !important;
   padding: 0px !important;
   border: none;
@@ -10047,14 +10047,14 @@ h1 {
 
 h3, h4, .nav li a, h5, h6 {
   font-family: HighVoltage;
-  color: #44535c;
+  color: #916f46;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   margin-top: 0; }
 
 h1, h2 {
   font-family: ChasingEmbers;
-  color: white;
+  color: #916f46;
   text-rendering: optimizeLegibility;
   line-height: 60%; }
 
@@ -10066,7 +10066,7 @@ h2 {
 
 body {
   background-color: #f9d180;
-  color: #44535c;
+  color: #916f46;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 html,
@@ -10074,7 +10074,7 @@ input,
 select,
 textarea {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #44535c; }
+  color: #916f46; }
 
 \:focus {
   outline-color: transparent;
@@ -10190,7 +10190,7 @@ input, textarea, .select, html.touch .chosen-container {
     heighT: 40px;
     text-decoration: none !important;
     font-size: 100%;
-    color: #44535c; }
+    color: #916f46; }
 
 input, textarea {
   padding: 7px; }
@@ -10270,15 +10270,15 @@ select {
 
 fieldset:not(.action) {
   background-color: #bdc8cf;
+  color: #44535c;
   border-radius: 5px;
   background-clip: padding-box;
   padding: 20px;
   margin: 10px 0; }
-
-fieldset .filter:not(:first-of-type) {
-  border-top: solid 1px #ccc;
-  margin-top: 20px;
-  padding-top: 20px; }
+  fieldset:not(.action) h1, fieldset:not(.action) h2 {
+    color: white; }
+  fieldset:not(.action) h3, fieldset:not(.action) h4, fieldset:not(.action) .nav li a, .nav li fieldset:not(.action) a, fieldset:not(.action) h5, fieldset:not(.action) h6 {
+    color: #44535c; }
 
 fieldset.action {
   margin-bottom: 20px; }
@@ -11091,7 +11091,7 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
 .title {
   zoom: 1;
   padding-bottom: 20px;
-  border-bottom: solid 1px #f9d180;
+  border-bottom: solid 3px #f9d180;
   margin-bottom: 20px; }
   .title:before, .title:after {
     display: table;

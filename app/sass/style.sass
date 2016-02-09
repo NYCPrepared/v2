@@ -20,11 +20,12 @@ $radius: 5px
 
 $color-bg: #f9d180
 $color-blurb: lighten(#aebcc4, 5%)
-$color-text: #44535c
-$color-title: white
+$color-text: #916f46
+$color-title: $color-text
 $color-link: grey
 $color-divider: grey
 $color-link-hover: lighten($color-link, 20%)
+$color-other: #44535c
 
 // button color variables
 
@@ -84,7 +85,7 @@ $icons_on: true
 .title
     +clearfix
     padding-bottom: $gap
-    border-bottom: solid 1px $color-bg
+    border-bottom: solid 3px $color-bg
     margin-bottom: $gap
     +media($bp, min)
         h1, h2, h3, h4

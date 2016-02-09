@@ -171,14 +171,15 @@ select
 
 fieldset
   &:not(.action)
+    h1, h2
+      color: white
+    h3, h4, h5, h6
+      color: $color-other
     background-color: $color-blurb
+    color: $color-other
     +radius(normal, $radius)
     padding: $gap
     margin: $gapxhalf 0
-  .filter:not(:first-of-type)
-    border-top: solid 1px #ccc
-    margin-top: $gap
-    padding-top: $gap
   &.action
     margin-bottom: $gap
     .btn

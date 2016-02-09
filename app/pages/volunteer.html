@@ -36,7 +36,7 @@
               <select class="chosen-select" multiple>
         <option value=""></option>
         {% for language in languages %}
-        <option value="{{language.name}}" {{language.status}}>{{language.name}}</option>
+        <option value="{{language.name}}" {{language.status}}>{{language.nativeName}}</option>
         {% endfor %}
     </select>
       </div>

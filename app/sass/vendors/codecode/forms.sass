@@ -178,7 +178,11 @@ fieldset
     background-color: $color-blurb
     color: $color-other
     +radius(normal, $radius)
-    padding: $gap 0
+    +media($bp, min)
+      padding: $gap
+      padding-right: 0
+    +media($bp, max)
+      padding: $gap 0
     margin: $gapxhalf 0
   &.action
     margin-bottom: $gap

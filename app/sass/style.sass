@@ -6,14 +6,13 @@
 
 $font-title: HighVoltage
 $font-main: ChasingEmbers
-$font-blurb: steelfish
 $font-text: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 $font-mono: "Courier New", Courier, monospace
 
 // ('ㅅ')づ critical variables
 
 $gap: 20px
-$bp: 770px
+$bp: 1000px
 $radius: 5px
 
 // ('ㅅ')づ color variables
@@ -78,24 +77,28 @@ $icons_on: true
 
 @import 'layout'
 
-+font-face(steelfish)
 +font-face(HighVoltage)
 +font-face(ChasingEmbers)
 
-.title
-    +clearfix
-    padding-bottom: $gap
-    border-bottom: solid 3px $color-bg
-    margin-bottom: $gap
-    +media($bp, min)
-        h1, h2, h3, h4
-            display: inline-block
-            width: 60%
-        p.blurb
-            float: right
-            width: 40%
-            padding-top: $gap
+// .title
+//     +clearfix
+//     padding-bottom: $gap
+//     border-bottom: solid 3px $color-bg
+//     margin-bottom: $gap
+//     +media($bp, min)
+//         h1, h2, h3, h4
+//             display: inline-block
+//             width: 60%
+//         p.blurb
+//             float: right
+//             width: 40%
+//             padding-top: $gap
 
+h1
+    margin: $gapx2 0 !important
+
+p.blurb
+    padding-right: $gapx3
 
 
 

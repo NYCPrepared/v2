@@ -9,27 +9,27 @@
 <div class="container">
       
 <form>
-    <div class="title">
             <h1>Volunteer Form</h1>
-            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores voluptatem animi dolore fugiat doloribus facilis nam tempore soluta ipsam?</p>
-    </div>
-    <fieldset>
-        <div class="title">
-            <h2>Personal Info</h2>
+
+    <fieldset class="row">
+        <div class="col-md-4">
+            <h2>About</h2>
             <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
     </div>
+    <div class="col-md-8">
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
         <input type="email" placeholder="Email">
         <input type="text" placeholder="Phone">
+    </div>
     </fieldset>
-    <fieldset>
-        <div class="title">
+
+    <fieldset class="row">
+        <div class="col-md-4">
             <h2>Knowledge</h2>
             <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
     </div>
-      <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
                 <h3>Skills</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae possimus animi quasi? Ratione consequatur temporibus, a quaerat sunt ex soluta!</p>
         <select class="chosen-select" multiple>
@@ -50,8 +50,6 @@
                 <option value="Construction">Construction</option>
                 
             </select>
-          </div>
-          <div class="col-md-6">
               <h3>Languages</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dolor, provident autem natus iste debitis officia, pariatur ad ducimus voluptatibus!</p>
               <select class="chosen-select" multiple>
@@ -422,20 +420,17 @@
         <option value="Zhuang, Chuang" >Zhuang, Chuang</option>
         
     </select>
-          </div>
       </div>
     </fieldset>
-    <fieldset>
-        <div class="title">
+    <fieldset class="row">
+        <div class="col-md-4">
         <h2>Availability</h2>
         <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium perspiciatis nemo omnis voluptates culpa voluptatibus itaque ipsam repellat deleniti labore!.</p>
        </div>
-       <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-8">
 
        <h3>Weekdays</h3>
-       <div class="choices has-2">
+       <div class="choices has-3">
             
             <label class="toggle">
                 <div>
@@ -495,7 +490,7 @@
             
         </div>
     <h3>Times</h3>
-    <div class="choices has-2">
+    <div class="choices has-3">
             
             <label class="toggle">
                 <div>
@@ -522,10 +517,6 @@
             </label>
             
         </div>
-
-            </div>
-            <div class="col-md-6">
-
             <h3>Regions</h3>
 
               <select class="chosen-select" multiple>
@@ -680,19 +671,16 @@
                </optgroup>
            </select>
 
-
-            </div>
         </div>
 
 </fieldset>
 
-<fieldset>
-    <div class="title">
+<fieldset class="row">
+    <div class="col-md-4">
     <h2>Resources</h2>
     <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minima, cupiditate vel commodi corporis a dolor ea quo magnam voluptas!</p>
     </div>
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
 
         <h3>Transportation</h3>
         <p>Check all that apply</p>
@@ -740,8 +728,6 @@
             
         </div>
 
-        </div>
-        <div class="col-md-6">
             <h3>Administrative</h3>
             <p>Nesciunt veniam eum libero accusantium, vitae, quasi sequi eius quo fuga omnis!</p>
 
@@ -761,7 +747,6 @@
             </label>
 
 
-        </div>
     </div>
 </fieldset>
 <fieldset class="action">

@@ -4,9 +4,27 @@
 {"name": "Food Preparation"},
 {"name": "Medical"},
 {"name": "Mental Health"},
-{"name": "Social Work"},
-{"name": "Repair Work"},
-{"name": "Construction"}
+{"name": "Social Worker"},
+{"name": "Repair Worker"},
+{"name": "Construction Worker"},
+{"name": "Data Manager"},
+{"name": "Google Drive"},
+{"name": "WordPress"},
+{"name": "Online Volunteer Coordinator"},
+{"name": "Sahana Admin"},
+{"name": "Warehouse Helper"},
+{"name": "Warehouse Leader"},
+{"name": "Muck Out Helper"},
+{"name": "Muck Out Leader"},
+{"name": "Driver"},
+{"name": "Commercial Driver"},
+{"name": "Site Helper"},
+{"name": "Site Manager"},
+{"name": "Social Media"},
+{"name": "Kitchen Helper"},
+{"name": "Kitchen Leader"},
+{"name": "Orientation Helper"},
+{"name": "Orientation Leader"}
   ]
 }
 

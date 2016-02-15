@@ -1,0 +1,17 @@
+{
+  "events": [
+              {"name": "Party"},
+            {"name": "Cleanup"},
+            {"name": "Other1"},
+            {"name": "Other2"},
+            {"name": "Other3"},
+            {"name": "Other4"},
+            {"name": "Other5"},
+            {"name": "Other6"}
+  ]
+}
+
+
+
+
+

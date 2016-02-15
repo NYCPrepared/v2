@@ -1,0 +1,108 @@
+{% extends "form.html" %}
+{% block active %}event{% endblock %}
+{% block content %}
+<form>
+  <h1>Event Form</h1>
+
+  <fieldset class="row">
+    <div class="col-md-4">
+      <h2>About</h2>
+      <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
+    </div>
+    <div class="col-md-8">
+      <input type="text" placeholder="Event Title">
+      <textarea placeholder="Goals"></textarea>
+      <p class="todo">When (calendar? range?)</p>
+      <h3>Institution</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, dolor.</p>
+      <select class="chosen-select">
+        <option value=""></option>
+        {% for institution in institutions %}
+        <option value="{{institution.name}}">{{institution.name}}</option>
+        {% endfor %}
+      </select>
+      <h3>Organizer</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, dolor.</p>
+      <select class="chosen-select">
+        <option value=""></option>
+        {% for user in users %}
+        <option value="{{user.name.first}} {{user.name.last}}">{{user.name.first}} {{user.name.last}}</option>
+        {% endfor %}
+      </select>
+
+     <h3>Event Type</h3>
+     <div class="choices has-3">
+      {% for event in events %}
+      <label class="toggle">
+        <input type="radio" name="type" value="{{event.name}}" />
+        <div class="box">
+          <div class="checkbox">
+          </div>
+          <div class="title">{{event.name}}</div>
+        </div>
+      </label>
+
+      {% endfor %}
+    </div>
+    <ul id="tab" class="nav nav-tabs">
+      <li class="active"><a href="#physical" data-toggle="tab">Physical Event</a></li>
+      <li><a href="#remote" data-toggle="tab">Remote Event</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade in active" id="physical">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptates asperiores perferendis quod dolores magni ex rerum ipsam id maxime.</p>
+        <input type="text" placeholder="Address">
+<textarea placeholder="Detailed Instructions"></textarea>
+      </div>
+      <div class="tab-pane fade" id="remote">
+        <p>Tab 2 content</p>
+      </div>
+    </div>
+    </div>
+  </fieldset>
+
+<fieldset class="row">
+  <div class="col-md-4">
+  <h2>Volunteer Types</h2>
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, saepe?</p>
+</div>
+<div class="col-md-8">
+  <p class="todo">Pending</p>
+</div>
+</fieldset>
+
+<fieldset class="row">
+  <div class="col-md-4">
+  <h2>Literature</h2>
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, minus!</p>
+</div>
+<div class="col-md-8">
+  <p class="todo">Pending</p>
+</div>
+</fieldset>
+<fieldset class="row">
+  <div class="col-md-4">
+  <h2>Social</h2>
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, error.</p>
+</div>
+<div class="col-md-8">
+  <p class="todo">Pending</p>
+</div>
+</fieldset>
+
+
+
+
+<fieldset class="action">
+  <a href="#" class="btn btn-default">
+    <i class="fa fa-times"></i>
+    Cancel
+  </a>
+  <a href="#" class="btn btn-primary pull-right">
+    <i class="fa fa-check"></i>
+    Save
+  </a>
+</fieldset>
+
+</form>
+{% endblock %}

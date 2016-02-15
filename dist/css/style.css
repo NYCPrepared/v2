@@ -214,11 +214,13 @@ th {
     max-width: 100% !important; }
   p,
   h2,
-  h3 {
+  h3,
+  p.todo {
     orphans: 3;
     widows: 3; }
   h2,
-  h3 {
+  h3,
+  p.todo {
     page-break-after: avoid; }
   .navbar {
     display: none; }
@@ -1132,7 +1134,7 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-h1, h2, h3, h4, .nav li a, h5, h6,
+h1, h2, h3, p.todo, h4, .nav li a, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -1140,8 +1142,8 @@ h1, h2, h3, h4, .nav li a, h5, h6,
   color: inherit; }
   h1 small,
   h1 .small, h2 small,
-  h2 .small, h3 small,
-  h3 .small, h4 small, .nav li a small,
+  h2 .small, h3 small, p.todo small,
+  h3 .small, p.todo .small, h4 small, .nav li a small,
   h4 .small, .nav li a .small, h5 small,
   h5 .small, h6 small,
   h6 .small,
@@ -1158,7 +1160,8 @@ h1, h2, h3, h4, .nav li a, h5, h6,
 
 h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3,
+p.todo, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
   h1 small,
@@ -1167,8 +1170,8 @@ h3, .h3 {
   h2 small,
   h2 .small, .h2 small,
   .h2 .small,
-  h3 small,
-  h3 .small, .h3 small,
+  h3 small, p.todo small,
+  h3 .small, p.todo .small, .h3 small,
   .h3 .small {
     font-size: 65%; }
 
@@ -1194,7 +1197,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 30px; }
 
-h3, .h3 {
+h3, p.todo, .h3 {
   font-size: 24px; }
 
 h4, .nav li a, .h4 {
@@ -10018,7 +10021,7 @@ textarea {
     orphans: 3;
     widows: 3;
     page-break-after: avoid; }
-  h3 {
+  h3, p.todo {
     orphans: 3;
     widows: 3;
     page-break-after: avoid; }
@@ -10041,7 +10044,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 120px; }
 
-h3, h4, .nav li a, h5, h6, .btn {
+h3, p.todo, h4, .nav li a, h5, h6, .btn {
   font-family: HighVoltage;
   color: #916f46;
   text-rendering: optimizeLegibility;
@@ -10092,7 +10095,7 @@ button, .button, .btn {
   -webkit-transition: color 300ms ease-out;
   transition: color 300ms ease-out; }
 
-h1, h2, h3, h4, .nav li a {
+h1, h2, h3, p.todo, h4, .nav li a {
   font-weight: normal; }
 
 html:not(.mac) .visible-mac,
@@ -10270,9 +10273,9 @@ fieldset:not(.action) {
   border-radius: 5px;
   background-clip: padding-box;
   margin: 10px 0; }
-  fieldset:not(.action) h1, fieldset:not(.action) h2, fieldset:not(.action) h3, fieldset:not(.action) h4, fieldset:not(.action) .nav li a, .nav li fieldset:not(.action) a, fieldset:not(.action) h5, fieldset:not(.action) h6 {
+  fieldset:not(.action) h1, fieldset:not(.action) h2, fieldset:not(.action) h3, fieldset:not(.action) p.todo, fieldset:not(.action) h4, fieldset:not(.action) .nav li a, .nav li fieldset:not(.action) a, fieldset:not(.action) h5, fieldset:not(.action) h6 {
     color: #44535c; }
-  fieldset:not(.action) h3:not(:first-of-type) {
+  fieldset:not(.action) h3:not(:first-of-type), fieldset:not(.action) p.todo:not(:first-of-type) {
     margin-top: 20px; }
   @media screen and (min-width: 1000px) {
     fieldset:not(.action) {
@@ -10695,8 +10698,7 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
 .fileUpload {
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-  margin: 10px; }
+  overflow: hidden; }
   .fileUpload input[type="file"] {
     position: absolute;
     top: 0;
@@ -11092,3 +11094,11 @@ p.blurb {
 
 .info .content {
   padding-left: 40px; }
+
+p.todo {
+  font-size: 30px;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  text-align: center;
+  margin: 20px 0;
+  color: #990000 !important; }

@@ -10,10 +10,10 @@
             <p class="blurb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, neque, asperiores. Blanditiis, quibusdam saepe cum eum non suscipit fugiat possimus.</p>
         </div>
         <div class="col-md-8">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
-            <input type="text" placeholder="Phone">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Repeat Password">
         </div>
     </fieldset>
 
@@ -51,7 +51,6 @@
          <h3>Weekdays</h3>
          <div class="choices has-3">
             {% for weekday in weekdays %}
-
             <label class="toggle">
                 <input type="checkbox" value="{{weekday.name}}" />
                 <div class="box">

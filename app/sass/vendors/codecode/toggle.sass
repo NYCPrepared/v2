@@ -10,6 +10,7 @@ $toggle_on: #44535c
 .toggle
     cursor: pointer
     display: block
+    +border-box
     padding-bottom: 2px
     +disable(select)
     input[type="checkbox"], input[type="radio"]
@@ -65,8 +66,8 @@ $toggle_on: #44535c
     .loss-graph-legend &
         padding-right: 15px
     .has-2 &
-        width: (100% / 2)
+        width: (100% / 2) - 1
     .has-3 &
-        width: (100% / 3)
+        width: (100% / 3) - 1
     .has-4 &
-        width: (100% / 4)
+        width: (100% / 4) - 1

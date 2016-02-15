@@ -10629,6 +10629,9 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
 .toggle {
   cursor: pointer;
   display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   padding-bottom: 2px;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -10683,11 +10686,11 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
   .loss-graph-legend .toggle {
     padding-right: 15px; }
   .has-2 .toggle {
-    width: 50%; }
+    width: 49%; }
   .has-3 .toggle {
-    width: 33.33333%; }
+    width: 32.33333%; }
   .has-4 .toggle {
-    width: 25%; }
+    width: 24%; }
 
 .chosen-container {
   position: relative;

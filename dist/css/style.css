@@ -10667,18 +10667,18 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
         color: #bdc8cf; }
     .toggle .box .title {
       font-weight: normal;
-      color: #44535c; }
+      color: #44535C; }
     .toggle .box .checkbox, .toggle .box .title {
       display: inline-block;
       vertical-align: middle;
       -webkit-transition: all 300ms ease-out;
       transition: all 300ms ease-out; }
   .toggle input:checked + .box .checkbox {
-    background-color: #44535c;
-    border: solid 1px #44535c;
+    background-color: #44535C;
+    border: solid 1px #44535C;
     padding-left: 20px; }
     .toggle input:checked + .box .checkbox:before {
-      background-color: #44535c; }
+      background-color: #44535C; }
   .toggle input:checked + .box .title {
     color: black; }
   .has-2 .toggle, .has-3 .toggle, .has-4 .toggle, .loss-graph-legend .toggle {
@@ -10691,6 +10691,26 @@ a:not(.btn):not([data-toggle="tab"]):not([data-toggle="collapse"]) {
     width: 32.33333%; }
   .has-4 .toggle {
     width: 24%; }
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px; }
+  .fileUpload input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none;
+    background: transparent;
+    heighT: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: "alpha(opacity=0)";
+    -khtml-opacity: 0;
+    -moz-opacity: 0; }
 
 .chosen-container {
   position: relative;

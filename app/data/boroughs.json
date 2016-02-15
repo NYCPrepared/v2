@@ -1,0 +1,9 @@
+{
+  "boroughs": [
+  {"name": "Bronx"},
+  {"name": "Brooklyn"},
+  {"name": "Manhattan"},
+  {"name": "Queens"},
+  {"name": "Staten Island"}
+  ]
+}
